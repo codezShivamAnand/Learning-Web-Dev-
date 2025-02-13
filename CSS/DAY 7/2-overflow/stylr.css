@@ -1,0 +1,13 @@
+.container{
+    height: 250px;
+    width:450px;
+    background-color: bisque;
+    /* overflow:hidden; */
+    /* overflow: scroll; */
+    /* overflow: auto; */
+}
+/* by defualut overflow is visible  
+overflow: hidden;
+overflow: scroll;
+overflow: auto;-> agagr content overflow ho rha toh automatic scroll bar provide karwa dega 
+*/

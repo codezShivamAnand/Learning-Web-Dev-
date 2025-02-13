@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMS</title>
+</head>
+<body>
+    
+    <form>
+        <label for="first">Name:</label> <!-- for attribute...clicking on label the cursor moves inside the box ready to type  --> 
+        <input type="text" id="first" name="MyName" value="" placeholder="type your name"> <!--id is used along with for, has the same value as for -->
+        <br>
+        <!-- MyName=shivam&MyAge=21&FathersName=Pawab%3Dn&FathersAge=&date%26time=  -->
+         <!-- name and value attribute is stored as key : value pair in the backend, if 'value' attr is left balnk is by default given something then if the user doesnt changes the vlaue the backend value remains default    -->
+        <!-- MyName = shivam, here MyName is 'name' attr and shivam is 'value' attr   -->
+         <!--if value attr is left blank or not mentioned in the input tag then wahatever the user inputs the value in the form at the frontend will be stored as value in the backkend   -->
+        <br>
+        <label for="second">Age:</label>
+        <input type="number" id="second" name="MyAge" value="">  <!-- 'name' attr : backend pe label Age will be stored by this very 'name' value    -->
+        <br>
+        <!-- in server the data is stored as name = value, thats why name and values is necessary attribut of input to differentiate father's age belongs to fathersName and my age belongs to myname -->
+        <br>
+        <label for="first">Father'sName:</label> <!-- for attribute...clicking on label the cursor moves inside the box ready to type  --> 
+        <input type="text" id="first" name="FathersName" value="Random" placeholder="type your name"> <!--id is used along with for, has the same value as for -->
+        <br>
+        <br>
+        <label for="second">Father'sAge:</label>
+        <input type="file" id="second" name="FathersAge" value="">
+        <br>
+        <br>
+        <label for="third">Date-Time:</label>
+        <input type="datetime-local" id="third" name="date&time" value="">
+        <br>
+        <br>
+        <button>Submit</button>
+    </form>
+</body>

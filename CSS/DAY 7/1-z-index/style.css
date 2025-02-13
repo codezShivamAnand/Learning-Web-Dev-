@@ -1,0 +1,39 @@
+.container{
+    background-color: bisque;
+    margin-left: 130px;
+    margin-top: 140px;
+    position: absolute;
+
+}
+.box{
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+    background-color: blue;
+}
+.box1{
+    background-color: rgb(93, 93, 164);
+    position: relative;
+    left: 240px;
+    top:40px;
+    z-index: 1;
+}
+/* <!-- jiska z index bada hoga woh uper dikhega  --> */
+.box2{
+    background-color: violet;
+    position: relative;
+    bottom: 60px;
+    right:10px;
+    z-index: 2;
+}
+.box3{
+    background-color: rgb(205, 91, 91);
+    position: absolute;  /*apna position chod dega toh box4 will occupy it */
+    top:20px; /* apne positioned parent( here container) ke respect me */
+    z-index: 4;
+}
+.box4{
+    background-color: aqua;
+}
+/* defautl z index is auto 
+    Z-index wont be applied for box4 since it's default pos is static  */

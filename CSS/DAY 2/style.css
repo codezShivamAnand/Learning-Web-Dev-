@@ -1,0 +1,36 @@
+/* color change by name of color */
+h1{
+    color:blue;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* the last in the font family is the parent font of all the fonts before it */
+
+    /* px size is determined by screen size -> 20px, bigger screen means will req higher pixels for better quality. Higer pixel-> large no of pixels to fill the screen size with small pixels  giving good clarity   */
+    font-size: 4em; /* em, relative to parent font size, twice  ->  */
+    /* rem, relative to root(html, 16px) font size, thrice */
+    /* %,relative to parent font size   */
+}
+/* color change using rgb */
+/* rgb -> each 0-255 (8 bit) */
+/* rgba-> a stands for opaque varies from 0-1 (0 means transparent , 1 means opaque) */
+p{
+    color: rgba(8, 244, 150, 0.6);
+}
+body{
+    /* background-color: beige; */
+    background-image: url(./contactmewebp.jpg);
+    background-size:cover;
+    background-repeat: no-repeat; 
+    /* prevents the image from repeating  */
+}
+/* color change by hue */
+/* hsl(hue, saturation, lightness)-> hue picks color is integer 0-360,  saturation & lightness is in % */
+h2{
+    color: hsla( 230, 30%, 40%, 0.7);
+}
+
+/* color change using hexadecimal ->starts with #, first 2 char for red, next 2 for blue, next 2 for green  */
+/* can be 8 characters too in case of when we want to include opacity -> last two char will denote opacity */
+h3{
+    color: #c3457f;
+}
+/* a means alpha (transparetn to opaque)-> (0 to 1) */

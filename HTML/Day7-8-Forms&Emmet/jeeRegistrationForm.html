@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1>IIT JEE Registration Form</h1> -->
+    <form action="url_server">
+    <fieldset> <!-- to wrap around similar type of details in a form-->
+        <legend>IIT JEE REGISTRATION FORM</legend> <!-- to give heading to the fieldset-->
+
+        <fieldset>
+            <legend>User Info</legend>
+        <label for="Fname">Full Name:<span style="color:crimson">*</span></label>
+        <input type="text" id="Fname" name="FullName">
+    
+    <br><br>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="Email">
+
+    <br><br>
+
+        <label for="phoneNo">Contact:</label>
+        <input type="text" id="phoneNo" name="Contact">
+
+    <br><br>
+
+        <label for="pass">Password:</label>
+        <input type="text" id="pass" name="Password">
+
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Other Info</legend>
+            <label >Gender</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+    <br><br>
+        <label for="DOB">Date of Birth</label>
+        <input id="DOB" name="D-O-B" type="date" min="2001-01-01" max="2005-12-31">
+<!-- min / max ka format yy-mm-dd -->
+    <br><br>
+
+        <label for="Sname">School Name:</label>
+        <input type="text" id="Sname" name="School Name">
+
+    <br><br>
+        <label for="board">Board:</label>
+        <select id="board" name="Board"   required>
+            <option value="" disabled selected>Select your Board</option>
+            <option value="cbse">CBSE</option>
+            <option value="icse">ICSE</option>
+            <option value="mp-board">MP board</option>
+            <option value="bihar-Board">Bihar Board</option>
+        </select>
+  
+    <br><br>
+        <label for="YOP">Year of Passing</label>
+        <input id="YOP" name="Year of Passing" type="number" min="2023" max="2025">
+
+    <br><br>
+
+        <label for="C-Id">Exam-Center</label>
+        <select id="C-Id" name="Exam-Center"  required>
+            <option value="" disabled selected>Select Center</option>
+            <option value="Noida">Noida</option>
+            <option value="New Delhi">New Delhi</option>
+            <option value="BP">Bhopal</option>
+            <option value="Indore">Indore</option>
+            <option value="Patna">Patna</option>
+        </select>
+    </fieldset>
+    <br><br>
+    <button>Register</button>
+    </fieldset>
+    </form>
+</body>
+</html>

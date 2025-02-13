@@ -1,0 +1,87 @@
+*{
+    margin:0px;
+}
+.container{
+    background-color: rgb(120, 120, 37);
+    height:700px;
+    display: flex;
+
+    /* 6. align content */
+
+
+    /*5.complete Center me lana hai toh  */
+    /* Horizontal center mein */
+    /* justify-content: center; */
+    /* Vertical center mein */
+    /* align-items: center; */
+
+    /*4. Flex wrap : used to provide responsivness when screen is squeezing it adjusts to that */
+    /* flex-wrap:nowrap; (by default) */
+    /* flex-wrap:wrap; */
+    /* flex-wrap:wrap-reverse; */
+
+    /* 3.align items: alignmnet around cross axis  */
+    /* align-items:flex-start; */
+    /* align-items:flex-end; */
+    /* align-items: center; */
+    /* align-items:stretch; */
+
+    /* 2. Justify Content : items alignment around main axis  - START, END , CENTRE, WITH SPACES BETWEEN THEM VARIATIONS  */
+    /* justify-content: flex-end; */
+    /* justify-content: flex-start; */
+    /* justify-content: center; */
+    /* justify-content: space-between; /* equal spaces between but no spaces at the edges  */
+    /* justify-content: space-around;  */
+    /* space around me should be same, har elemnt ke left aur right mein space uske corresponding same hoga , agar box1 ko  10 px left toh 10 px right , box 2 might have 20px left then def 20px right */
+    /* justify-content: space-evenly; */
+
+    /*1. FLEX -DIRECTION: */
+    /* flex-direction:row; is by default)*/
+    /* flex-direction:column; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column-reverse; */
+    
+}
+
+.box1{
+    background-color: aquamarine;
+    height:150px;
+    width:150px;
+    /* margin-left:10px; */
+    
+}
+.box2{
+    background-color: rgb(207, 115, 28);
+    height:150px;
+    width:150px;
+    margin-left:10px;
+}
+.box3{
+    background-color: rgb(19, 241, 74);
+    height:150px;
+    width:150px;
+    margin-left:10px;
+}
+.box4{
+    background-color: rgb(255, 127, 197);
+    height:150px;
+    width:150px;
+    margin-left:10px;
+}
+/* ------------------------------------------------------------------ */
+.test{
+    display:flex;
+    align-items:baseline;
+    /* position:relative; */
+}
+.hello{
+    font-size:50px;
+}
+/* one way to postion baccho on the same level as hello is traditional position method , Now we gonna do it using flex property align-items : baseline  */
+.baccho{
+    font-size: 25px;
+    margin-left:10px;
+    /* position:absolute;
+    left:120px;
+    top:20px; */
+}

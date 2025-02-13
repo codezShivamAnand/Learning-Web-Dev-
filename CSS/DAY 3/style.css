@@ -1,0 +1,23 @@
+h1{
+    font-size: 10vh;
+    /* vw = % of viewport width 
+        vh = % of viewport height */
+    text-transform: lowercase;
+}
+h3.normal{
+    font-variant: normal;
+    font-stretch:expanded;
+
+}
+h3.small-caps{
+    font-variant: small-caps;
+}
+
+p{
+    line-height: 40px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    /* font-stretch:expanded; */
+    /* font-stretch:condensed; */
+
+}

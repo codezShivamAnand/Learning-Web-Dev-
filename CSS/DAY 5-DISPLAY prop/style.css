@@ -1,0 +1,31 @@
+.first{
+/* block element ko HEIGHT, WIDTH AND MARGIN DE SKTE HAIN */
+    background-color: green;
+    height:200px;
+    width: 200px;
+    margin: 40px;
+    /* display: inline;  */
+    /*  */
+}
+.second{
+    background-color: red;
+    height:80px;
+    width: 100px;
+    margin: 50px;
+}
+span{
+    background-color: yellow;
+/* 1.INLINE elemnt ko HEIGHT, WIDTH nhi de skte, only HORIZONTAL MARGIN MILTA HAIN, vertical bhi milta hain but show nhi hota hai in display  */
+/* -------------------------------------------------------------- */
+/*2. diplay : block; kar diya toh convert ho gya block mein ab hum height and width & margin appply kar skte hain   */
+    /* display:block;
+    height:100px;
+    width: 100px;
+    margin:10px; */
+/*3. ----------------------------------- */
+    display: inline-block; 
+    height:100px;
+    width: 100px; 
+    /* margin: 20px; */
+}
+/* inline block karne se element behave like inline but we can add height width Margin to it too  */

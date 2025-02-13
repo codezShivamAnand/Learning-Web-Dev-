@@ -1,0 +1,52 @@
+.container{
+    display: flex;
+    background-color: black;
+    height:1000px;
+/* ---------------------------------------- */
+    /* align self : gives power to manipulate the individual boxes of contanier */
+    /* justify-content: center;
+    align-items: center; */
+/* ---------------------------- */
+    /* flex-direction: column; */
+    /* try flex grow in flex-direction: column  */
+}
+
+/* Shorthand in flex  */
+/* flex: <flex grow><flex-shrink><flex-basis> */
+.box{
+    height:150px;
+    width:150px;
+}
+/* flex shrink by default sabka 1 hota hai */
+.box1{
+    background-color: aquamarine;
+    /* flex-shrink : 3; */
+    /* align-self:flex-start; */
+}
+/* Flex item */
+/* order it defines the order of elements  */
+/* default order is 0 , jiska order sabse kam wo sabse aage*/
+.box2{
+    background-color: rgb(207, 115, 28);
+/* --------------- shorthand---------------------------------- */
+    /* flex: 2 2 200px; */
+/* --------------------------------------- */
+    /* order: -1; */
+}
+/* by default flex grow is 0 */
+/* flex grow grows in main axis  */
+.box3{
+    background-color: rgb(19, 241, 74);
+    /* align self works along cross axis */
+    /* align-self: flex-end; */
+    /* order:10; */
+    /* flex-grow:1; */
+}
+.box4{
+    background-color: rgb(255, 127, 197);
+    /* flex basis increases the size along the main axis, overwrites the initial size value  */
+    /* flex-basis: 300px; */
+/* ----------------------------- */
+    /* flex-shrink:2; */
+
+}

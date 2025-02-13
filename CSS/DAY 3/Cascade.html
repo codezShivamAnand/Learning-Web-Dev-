@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./cascade.css">
+    <style>
+        h3{ 
+        /* Internal Css  */
+            background-color:rgb(210, 208, 176)
+        }
+    </style>
+    <!-- note if this internal css comes before link which measn external css will come after internla css in that case toh phir external css ka priority jyda hoga  -->
+</head>
+<body>
+    <h1 class="first_class" id="first_id" draggable="true">Hello Coder Army</h1>
+    <h2 class="first">Learning Cascading</h1>
+<!--priortiy :  order <specifity <type < important -->
+    <ul>
+        <!-- Inheritance in CSS : 
+         body pe koi property applie hogi toh woh uske saare child pe hoga, but agar koi child pe specific property lagti hai toh phir uske descendant bhi uss property ko inherit kkar lenge   -->
+        <li>cascading determines priority  </li>
+        <li>id is first priority</li>
+        <li>class is second </li>
+    </ul>
+    <h2>All is Well</h2>
+
+    <!-- Inline css -->
+    <h3 style="background-color: chocolate;">This is verifying TYPE in Cascading </he>
+</body>
+</html>

@@ -1,0 +1,12 @@
+header{
+    background-color: aqua;
+    position: fixed;
+    left:0px;
+    right:0px;
+    top:0px;
+}
+
+p{
+    /* margin-top:100px; */
+    padding-top:100px;
+}

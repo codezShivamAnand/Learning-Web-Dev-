@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- audio file attach -->
+       <!-- 1st Method  -->
+    <!-- <audio src="./Media/check.mp3" controls></audio> -->
+     <!-- 2nd Method -> has some advantage we can give multiple audio if one dioesnt lay the next plays  -->
+    <audio controls>
+        <source src="./Media/Jaadugar.mp3"> <!-- Primary audio src-->
+        <source src="./Media/check.mp3"> <!--Alternate audio src-->
+        songs not loaded <!--if above both doesnt loads-->
+    </audio>
+    <br><br>
+     <!-- Video file attached  -->
+       <!-- 1st Method  -->
+    <!-- <video src="./Media/hawa.MP4" width="250" height="300" controls></video> -->
+     <!-- 2nd Method -> has some advantage we can give multiple audio if one dioesnt lay the next plays  -->
+   <video controls height="300" width="250" autoplay muted>
+        <source src="./Media/hawa.MP4" type="video/mp4">
+        <!-- alternate souc=rces -->
+        video is not played 
+    </video>
+
+<!-- youtube video file attached  -->
+
+ <!-- iframe src="https://www.youtube.com/embed/video_ID" -->
+    <iframe  src="https://www.youtube.com/embed/y_oKvCtIQDs" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/ctra61zjCUM"></iframe>
+
+    <!-- website connecting using iframe -->
+    <iframe src="../Day7-Forms&Emmet/EmployeeDetailsForm.html" height="400"></iframe>
+
+
+</body>
+</html>

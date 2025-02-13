@@ -1,0 +1,21 @@
+.img1{
+    height: 200px;
+    width: auto;
+    /* float: right; */
+    float:left;
+    margin-right: 20px;
+    clear:;
+    
+}
+
+.img2{
+    height: 200px;
+    width: auto;
+    float: left;
+    clear:right;
+    /* clear:both; */
+}
+
+/* agagr do elements both float right toh rightest mein kon ayega will be decided based on kaun html mein phle aya hain  */
+/* float works only for horizontal move left and right */
+/* clear:right;-> mere right mein agar koi element float ho rhi hain toh mujhe niche leke chale jana  */

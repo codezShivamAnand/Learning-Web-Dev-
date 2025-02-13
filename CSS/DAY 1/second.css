@@ -1,0 +1,30 @@
+/* body{
+    background-color:rgb(155, 72, 72);
+} */
+
+/* * - universal selector
+*{
+    color:blue;
+    background-color:rgb(155, 72, 72);
+} */
+
+/*  Group Selector  */
+h1,h2, #para{
+    background-color: blue;
+}
+
+/* Attribute selector */
+h2[draggable="true"]{
+    background-color: chartreuse;
+}
+h2[contenteditable="true"]{
+    background-color: hotpink;
+}
+/* Descendant selector -> styles till its last element in heirarchy*/ 
+section p{
+    background-color:blueviolet;
+}
+/* child selector -> goes just one level down in its heirarchy to style*/
+section > p{
+    background-color: chocolate;
+}

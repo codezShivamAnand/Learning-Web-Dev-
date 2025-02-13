@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+}
+body{
+    background-color: rgb(254, 247, 247);
+}
+
+.card:hover{
+    background-color: white;
+    border-color: white;
+    /* on hovering over card the effect should show up  */
+}
+.image{
+    /* "off "  ke liye it's working as a parent so if we using 'position : absolute' for 'off' toh 'image' working as a parent so iske position ko relative krna hoga so that image ke aas pass hi fix ho off */
+    position:relative;
+}
+.off{
+    font-size:20px;
+    background-color: rgba(10, 146, 205, 0.7);
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+}
+
+.card{
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: 10px rgb(254, 247, 247) solid;
+    /* while we are not hovering the effect should not be seen that's why keep the color of border same as body color */
+    border-radius: 20px;
+}
+.Box{
+    display: inline-block;
+}
+.img{
+    height: 200px;
+    width: 340px;
+    border-radius: 20px;
+}
+.Resturant_name{
+    font-size: 20px;
+    font-weight: bold;
+}
+.Resturant, .food, .Location{
+    position: relative;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.rating{
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    /* height:30x;
+    width: 30px; */
+    padding-left: 5px;
+    padding-right: 3px;
+    position: absolute;
+    right: 5px;
+
+}
+.box1{
+    border-radius: 6px;
+}
+.food, .Location{
+    color:rgb(110, 106, 106);
+    font-size: 16px;
+}
+.price, .distance{
+    font-size: 16px;
+    color:rgb(147, 155, 163);
+    position: absolute;
+    right: 4px;
+    /* apne parents ke respect mein-> food -> make food relative otherwises ye apne grandparent ke relative mein displace hoga */
+}
+.distance{
+    font-weight: bold;
+    color: rgb(117, 108, 108);
+    font-size: 14px;
+}

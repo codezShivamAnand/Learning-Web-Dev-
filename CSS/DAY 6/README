@@ -1,0 +1,44 @@
+1.Position 
+    static 
+    Relative
+    Absolute
+    Fixed
+    Sticky
+    
+2. Z-index
+3. overflow: hidden, visible, scroll, auto
+4. flow and clear 
+-------------------------------------------------
+1. POSITION 
+ five different position values:
+    static
+    relative
+    fixed
+    absolute
+    sticky
+ Elements are then positioned using the top, bottom, left, 
+ and right properties. For these property to work, first position value should be set 
+
+
+position: static;
+    Static positioned elements are not affected by the top, bottom, left, 
+        and right properties.
+
+position: relative;
+    >positioned relative to its normal position.
+    >Setting the top, right, bottom, and left properties of a relatively-positioned 
+        element will cause it to be adjusted away from its normal position
+    >Other content will not be adjusted to fit into any gap left by the element.
+
+position: fixed;
+    >positioned relative to the viewport
+    >always stays in the same place even if the page is scrolled
+    >The top, right, bottom, and left properties are used to position the element.
+    >iska original place koi aur occupy kar skta hai
+    >A fixed element does not leave a gap in the page where it would normally have been located.
+
+position: absolute;
+    >leaves its originalposition , any element can occupy 
+    >positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).
+    >nearest positioned ancestor ka position should not be static.
+    >However; if an absolute positioned element has no positioned ancestors, it uses the document body, and adjusts relative to the viewport,like fixed .

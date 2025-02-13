@@ -1,0 +1,11 @@
+h1{
+    border: 5px greenyellow solid;
+    height: 300px;
+    width: 300px;
+    padding: 10px;
+    margin: 40px;
+    /* No effect of MARGIN ON box-sizing, wether it be content box(by default) or border-box model  */
+    box-sizing: border-box; 
+    /* box-sizing: content-box; bydefsult  */
+
+}

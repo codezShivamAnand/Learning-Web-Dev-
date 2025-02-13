@@ -1,0 +1,32 @@
+EmployeeDetailsForm
+  1.DROPDOWN , using select tag 
+    <label for="Dept">Department:</label>
+        <select name="Department" id="Dept">
+            <option value="">Select Your Department</option>
+            <!-- <option value="" disabled selected>Select Your Department</option> -->
+            <option value="Engineer">Eng</option>
+            <option value="Finance">Finance</option>
+            <option value="HR">HR</option>
+            <option value="IT">IT</option>
+            <option value="Manager">Manager</option>
+        </select>
+
+  2.How to use Radio check button  
+  <label>Gender:</label>
+  <input type="radio" id="Male" name="gender" value="M">
+  <label for="Male">Male</label>
+  <input type="radio" id="Female" name="gender" value="F">
+  <label for="Female">Female</label>
+  <input type="radio" id="other" name="gender" value="Other">
+  <label for="other">Other</label>
+   notice how the name is same for all the input tag, cz we want to select only one option out of the three input options  
+  3. 
+  <form>
+    <label for="DOB">Date of Birth</label>
+    <input id="DOB" name="D-O-B" type="date" min="2001-01-01" max="2005-12-31">
+   </form> <!-- min / max ka format yy-mm-dd -->
+
+   <form>
+    <label for="YOP">Year of Passing</label>
+    <input id="YOP" name="Year of Passing" type="number" min="2023" max="2025">
+   </form>

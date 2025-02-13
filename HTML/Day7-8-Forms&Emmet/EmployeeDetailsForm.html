@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Employee Details Form</h1>
+    <form>
+        <label for="fName">Full Name:</label>
+        <input type="text" id="fName" name="Name" placeholder="Enter your full name">
+    </form>
+    <br>
+    <form>
+        <label for="email">Email: </label>
+        <input type="text" id="email" name="Email" placeholder="Enter your email" required>
+    </form>
+    <br>
+    <form>
+        <label for="Ph-nO">Phone Number:</label>
+        <input type="text" id="Ph-nO" name="Contact" placeholder="Enter your phone number">
+    </form>
+    <br>
+    <form>
+        <label>Gender:</label>
+        <input type="radio" id="Male" name="gender" value="M">
+        <label for="Male">Male</label>
+        <input type="radio" id="Female" name="gender" value="F">
+        <label for="Female">Female</label>
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other">Other</label>
+    </form>
+    <br>
+    <form>
+        <label for="JobTitle">Job Title: </label>
+        <input type="text" id="JobTitle" name="JobTitle" placeholder="Enter your Job Title">
+    </form>
+    <br>
+    <form>
+        <!-- HOW TO USE DROPDOWN -->
+        <label for="Dept">Department:</label>
+        <select name="Department" id="Dept">
+            <!-- <option value="">Select Your Department</option> -->
+            <option value="" disabled selected>Select Your Department</option>
+            <option value="Engineer">Eng</option>
+            <option value="Finance">Finance</option>
+            <option value="HR">HR</option>
+            <option value="IT">IT</option>
+            <option value="Manager">Manager</option>
+        </select>
+    </form>
+    <br>
+    <form>
+        <label for="Age">Age: 18?</label>
+        <input id="Age" name="exactly18" type="radio" value="ye" required>
+        <label for="Age">yes</label>
+        <input id="Age" name="exactly18" type="radio" value="ne" required>
+        <label for="Age">No</label>
+        <input id="Age" name="exactly18" type="radio" value="ne" required>
+        <label for="Age">gretaer</label>
+    </form>
+    <br>
+    <button>Submit</button>
+</body>
+</html>
+

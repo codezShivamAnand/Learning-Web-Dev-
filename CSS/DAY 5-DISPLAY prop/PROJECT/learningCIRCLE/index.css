@@ -1,0 +1,12 @@
+*{
+    margin:0;
+}
+.circle{
+    background-color: red;
+    height:60vh;
+    width: 60vh;
+    border-radius: 50%;
+    margin:auto;
+    margin-top:20vh;
+}
+/* margin:auto chizo ko horizontally center mein align kar deta hain */

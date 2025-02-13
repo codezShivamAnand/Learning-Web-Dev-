@@ -1,0 +1,56 @@
+.container{
+    background-color: rgb(114, 7, 97);
+    margin-left: 15vw;
+    margin-top: 40vh;
+    position: absolute;
+    /* position: relative; */
+    height: 1000px;;
+}
+/* --------------------- 
+POSITION 
+    1   STATIC 
+    2.  RELATIVE
+    3.  FIXED
+    4.  ABSOLUTE 
+             priority of mov : top > bottom 
+                left > right 
+            */
+.box{
+    height: 150px;
+    width: 150px;
+    display: inline-block;
+}
+.box1{
+    background-color: violet;
+    position: static;
+}
+.box2{
+    background-color: blue;
+    /* position: relative;  */
+    /* bottom: 20px;  */
+    top:20px;
+    left: 30px;
+    /* right: 60px; */
+            /* box 2 moved relative to its normal position  */
+}
+/* FIXED : positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled.  */
+.box4{
+    background-color: green;
+    /* position: fixed; */
+    top: 5vh;
+    /* bottom: 80vh; */
+    left: 30vw;
+    right: 50vw;
+}
+.box3{
+    background-color: red;
+    position: absolute;
+    /* top: 0vh;  even tho its vh it adjusts relative to the positioned ancestor */
+    top: 50px;
+    /* bottom: 10vh; */
+    left:30px;
+}
+
+.box5{
+    background-color: rgb(7, 255, 94);
+}

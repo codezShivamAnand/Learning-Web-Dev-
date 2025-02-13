@@ -1,0 +1,61 @@
+
+
+/* text-spacing 
+p{
+    font-size:2rem;
+    background-color: rgb(141, 141, 189);
+    text-indent: 50px;
+    letter-spacing:1px;
+    line-height:35px;
+    white-space: 30px;
+}
+*/
+/* Text transform : capitalize
+    capitalize: first letter of every word becomes capital 
+    uppercase :transform into uppercase 
+
+h1{
+    text-transform: capitalize;
+}
+*/
+/* Text decoration : overline, line-through,  underline, overline,  
+    
+    text-decoration-color: 
+    text-decoration-style:
+    text-decoration-thickness:
+h1{
+    text-decoration: overline;
+}
+*/
+/* --------------------------------------------- */
+h3{
+    background-color: rgb(165, 58, 58);
+    /* direction:rtl;
+    unicode-bidi: bidi-override; */
+}
+/* Vertical align : super , sub , baseline */
+span{
+    background-color: aqua;
+    vertical-align: super;
+}
+
+
+/* text-align-last : last line pe operation : right, left, justify, centre 
+p{
+    background-color: chocolate;
+    text-align-last: right; 
+    
+} */
+/* ----------------------------------------------------- */
+/* .container{
+    background-color: rgb(133, 189, 189);
+    text-align: justify; 
+}
+h2{
+    background-color: blue;
+}
+p{
+    background-color: rgb(97, 21, 173);
+} */
+
+/* --------------------------------------------------- */

@@ -1,0 +1,58 @@
+h1{
+    background-color: aquamarine;
+    width: 200px;
+    height: 100px;
+
+    /* border-style: double;
+    border-width: 5px;
+    border-color:blueviolet; */
+
+    /* OR  border: <width>  <color>  <style> ; */
+    border: 5px blueviolet dotted;
+
+    border-radius: 10px; /* to make the edges of border curve */
+}
+/* BOX MODEL 
+  <  <  <   < content > padding > Border > Margin >  {these are not greater or less sign}*/
+h3{
+    background-color: deeppink;
+/* border ko sirf ek side se bhi manipulate kar skte hain */
+        /* border-left-width: 10px;
+        border-left-color:blue;
+        border-left-style: solid; */
+        /* OR  */
+        border-left: 5px rgb(116, 241, 7) solid;
+
+    /* compare this to above where we specifically mentioned border left */
+    /* border-style: solid;
+    border-color:blue; */
+}
+
+p{
+    background-color: coral;
+    border-style: solid;
+    border-width: 10px;
+    border-color: black;
+
+    padding: 5px;
+}
+
+.border{
+    background-color: mediumslateblue;
+    border-width: 15px 25px 72px; 
+    
+    border-color:fuchsia;
+}
+.padding{
+    background-color: aquamarine;
+    border-color: blue;
+    padding: 10px 20px 50px 80px;
+}
+.margin{
+    background-color: rgb(167, 26, 158);
+    margin:40px 20px 10px;
+}
+img{
+    height: 500px;
+    width: 700px;
+}

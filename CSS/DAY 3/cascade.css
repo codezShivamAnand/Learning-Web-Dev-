@@ -1,0 +1,59 @@
+h1{ /* Element Tag */
+    background-color: aquamarine;
+    font-size: 10px;
+    /* background-color: blueviolet; */
+    /* same selector -> ordereing applies-> the property that comes last will be highest priority */
+}
+/* priority in SPECIFICITY  
+    1. ID
+    2.ATTRIBUTES 
+    3.CLASS
+    4.CHILD AND DESCENDANT 
+    5.ELEMENT AND GROUP ELEMENT
+*/
+
+/* class */
+.first_class{
+    background-color: blueviolet;
+} 
+
+/* ID selector */
+#first_id{
+    background-color: rgb(247, 14, 53) ;
+}
+
+/*  ATTRIBUTES selector  */
+h1[draggable="true"]{
+    /* background-color: blue !important; */ 
+    background-color: blue;
+}
+
+/* Descendent */
+body h2{
+    background-color: rgb(200, 61, 140);
+} 
+/* child and descedent ki priority same hai toh priority will be decided by ordering. Jo last me ayega uska priority high */
+/* child */
+body > h2{
+    background-color: rgb(27, 24, 110);
+}
+
+
+/* Priority in Type 
+    inline > Internal = External 
+     internal and extrnal mein jo phle aye wo */
+
+h3{
+    background-color: seagreen;
+}
+
+/* INHERITANCE  */
+body{
+    /* all descendant will inherit this color  */
+    background-color: rgb(114, 103, 103);
+}
+
+ul{ 
+    /* ul list ke saare descendant will inherit this color  */
+    background-color: beige;
+}

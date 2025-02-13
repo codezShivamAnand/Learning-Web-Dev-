@@ -1,0 +1,21 @@
+/* ELEMENT SELECTOR */
+h1{
+   color:aqua;
+   background-color: black;
+}
+ul{
+    background-color: beige;
+}
+
+/* Class as selector  */
+.first{
+    background-color:aquamarine;
+}
+.sec{
+    color:blue;
+}
+
+/* ID SELECTOR */
+#third{
+    background-color: palevioletred;
+}
