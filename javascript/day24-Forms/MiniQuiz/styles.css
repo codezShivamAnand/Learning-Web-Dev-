@@ -1,0 +1,54 @@
+body{
+    background-color: black;
+    color:white;
+}
+h2{
+    text-align: center;
+    color: white;
+}
+.container{
+    background-color: rgb(123, 81, 104);
+    /* display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */ 
+    margin-left: 25%;
+    margin-right: 25%;
+    border : 2px solid white;
+}
+
+form{
+    background-color: chocolate;
+    display:flex;
+    flex-direction: column; 
+    justify-content: center;
+    /* align-items: center; */
+    font-size: 1.3rem;
+}
+.question{
+    
+    /* margin-left: 50px; */
+}
+.buttons{
+    /* background-color: rgb(164, 170, 195); */
+    color:white;
+    padding: 10px;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    
+}
+#submit, #reset{
+    background-color: rgb(38, 68, 186);
+    color:white;
+    padding: 10px;
+    font-size: 1.4rem;
+    margin:10px;
+}
+#result{
+    /* background-color: aqua; */
+    font-size:1.5rem;
+    color:rgb(10, 238, 10);
+    font-weight: bold;
+    text-align: center;
+}
