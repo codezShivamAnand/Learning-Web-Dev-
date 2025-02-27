@@ -1,0 +1,43 @@
+// 1. Creating an Array   :
+    let arr = [1,2, "23", true];
+// 2. Length 
+    console.log(arr.length); // 4 
+// 3. Accessing Array Elements
+    console.log(arr[0]); // 1
+    console.log(arr[1]); // 2
+    // .at() method
+    console.log(arr.at(2)); // 23
+    console.log(arr.at(-2)); // 23
+    console.log(arr.at(4)); // undefined
+    // negative indexing The negative index counts backwards from the end of the array, where -1 represents the final element.,
+    // -2 represents the second to last element, and so on. In case of out of bounds, the array.at() method returns undefined.
+
+// 4. structuredClone() method
+    // The structuredClone() method creates a deep copy of the array, including all nested arrays and objects.
+    let arr = [1, 2, [3, 4], { a: 1, b: 2 }];
+    let clone = arr.structuredClone();
+    console.log(clone); // [1, 2, [3, 4], { a: 1, b: 2 }]
+    console.log(arr === clone); // false
+    console.log(arr[2] === clone[2]); // false
+    console.log(arr[3] === clone[3]); // false
+
+//5. .push() method
+    // push elements at end of array , can push one array into another array too
+//6. unshift : add element at start 
+//shift : delete element from start
+//7.  delete operation 
+// delete arr[2]; // creates hole at index 2
+//8. .indexOf(element) , .lastIndexOf(element), .includes(element)
+
+//9. slice(i, j) : i to j-1, slice means cut out the portion from i to j-1, slice does not change the original array
+//splice(i,j) : returns j elements starting from i or we can say, ith index se total j index return karo   
+// splice(starting_index, totoal_element_delete,add value just after jaha tak delete ho rkha hai )
+
+//10. .toString() : converts array to string
+//11. .join() : converts array to string with separator
+//12. .concat() : merge two arrays
+//13. .reverse() : reverse the array
+//14. .flat() : flat the array 2-D to 1-D
+    //   .flat(1)- ends first level of abstraction of 2-d array  
+
+//15. Array.isArray(var_name); // returns true if array
