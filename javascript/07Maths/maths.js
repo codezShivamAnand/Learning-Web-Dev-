@@ -1,21 +1,26 @@
 let num1 = 231;
-let num2 = new Number(231);
+let num2 = new Number(231); //new Number(value) creates a Number object, instead of a primitive number.
 let num3 = new Number(231);
-console.log(num1);
-console.log(num2);
-console.log(typeof num2);
+// console.log("num1",num1);
+// console.log("num2",num2); 
+// console.log(typeof num2);
 // memory allocated in Heap means typeof will be object 
-console.log(num1 == num2); // Num-obj comparison, num2 will convert to Number then comaprison 
-console.log(num2 == num3); // obj-obj cmparison 
+// console.log(num1 == num2); // Num-obj comparison, num2 will convert to Number then comaprison 
+// console.log(num2 == num3); // obj-obj comaprision (:checks if they refer to the same memory location) Compared by reference
 
 //2. toFixed(decimal ke baad kitne digit tak)
-// let num = 231.56;
+let num = 231.56;
 // console.log(num.toFixed(2));
 // console.log(num.toPrecision(4));
 // console.log(num.toPrecision(2)); // 2.3e^2 
 // console.log(num.toExponential(2));
 // console.log(num.toExponential(3));
-// console.log(num.toString());
+//     Method	    Purpose	                      Example (123.456)	        Output( a string)
+//     toFixed(n)	Fixed decimal places	          toFixed(2)	        "123.46"
+// toPrecision(n)	Total significant digits	     toPrecision(4)	        "123.5"
+// toExponential(n)	 ConvertsTscientificnotation	toExponential(2)	   "1.23e+2"
+
+// console.log("str",num.toString());
 // console.log(num.valueOf());
 
 // Math -> is an obj too
@@ -55,7 +60,7 @@ console.log(Math.floor(Math.random()*11 +20 ));
 // ludo
 
 // 1-6 numbers generated 
-console.log(Math.floor(Math.random()*(6-1+1)+1 ));
+console.log(Math.floor(Math.random()*(6-1+1))+1 );
 
 
 

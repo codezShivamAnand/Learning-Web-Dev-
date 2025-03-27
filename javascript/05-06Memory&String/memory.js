@@ -1,6 +1,8 @@
+// Primitive Datatype are immutable i.e, they can't be changed. 
+// Also they are directly stored in stack memory.
 let a = 10;
 let b = a;
-b = 30;
+b = 30; // copy of a is stored in b so, changes in b will not reflect in a
 console.log(b);
 console.log(a);
 
@@ -9,12 +11,12 @@ let obj1 = {
     id : 220,
     naming : "rohit"
 }
-let obj2 = obj1;
-console.log(obj1);
+let obj2 = obj1; // obj2 stores the address of obj1 , reference copy hui hai na ki actual values 
+console.log(obj1); // { id: 220, naming: 'rohit' }
 console.log(obj2);
 
 obj2.id = 30;//  changes in obj2 reflects in obj1 but this same is not in primitive 
-console.log(obj1);
+console.log(obj1); // { id: 220, naming: 'rohit' }
 console.log(obj2);
 
 const num = 10;
@@ -30,8 +32,8 @@ const obj = { // obj stores the address of memory location where id and balance 
 obj.id = 11;
 console.log(obj);
 
-let obj2={
-    id : 20,
-    money : 300
-}
-obj = obj2; // address in obj1 is getting replaced by obj2 value , which is not possible cz obj1 is const 
+// let obj3={
+//     id : 20,
+//     money : 300
+// }
+// obj = obj3; // address in obj is getting replaced by obj3 value(which is also an address) , which is not possible cz obj1 is const 

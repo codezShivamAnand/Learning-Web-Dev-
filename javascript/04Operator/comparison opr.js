@@ -23,18 +23,24 @@
 // let a3 = "30";
 // let a4 = 30;
 // console.log("x", a2 === a3);
-// console.log(a2 === a4);
+// console.log("y", a2 === a4);
+
 
 // null and undfefined 
+// let x = null;
+// let y = undefined;
+// console.log(typeof x); // object
+// console.log(typeof y); // undefined
+// console.log("1", null == undefined); // true ; //***  null can only be equiv to undefined i.e, sirf iss case me rule defined hai ki yha type conversion nhi hoga , baaki har comaprison operator will do type conversion first.
 
-console.log(null == undefined); // true ; // null can only be equiv to undefined i.e, sirf iss case me rule defined hai ki yha type conversion nhi hoga , baaki har comaprison operator will do type conversion first.
-console.log(null === undefined); // false 
-// console.log(null == a2); // false 
-console.log(null == 0); // false 
-console.log(null > 0); // 0 > 0 ? 
-console.log(null < 0); // 0 < 0 ? 
-console.log(null >= 0); // 0 >= 0 ? true
-console.log(null <= 0); // 0 <= 0 ? true
+// console.log("2",null === undefined); // false // why ? because === checks type first then value so, type is different so, false
+// // console.log(null == a2); // false 
+// console.log("3",null == 0); // false 
+// console.log( "4", null > 0); // 0 > 0 ? 
+// console.log("5", null < 0); // 0 < 0 ? 
+// console.log("6", null >= 0); // 0 >= 0 ? true
+// console.log( "7", null <= 0); // 0 <= 0 ? true
+
 // >,<, >= , <= all these type convert first then compare so, null to Number is 0 .
 
 // UNdefined comparison
@@ -47,19 +53,21 @@ console.log(undefined <= 0); // Nan <= 0 ? False
 */
 // NaN comapriosn 
 /*
-console.log(NaN == NaN);
+console.log(NaN == NaN); // false
+console.log(NaN === NaN); // false
 let st3 = "rohit";
 let st4 = "mohiy";
 console.log(Number(st3));
 console.log(Number(st4));
 console.log(Number(st3) == Number(st4));
-*/
+
 let abc1 = 123;
 let abc2 = "123";
 let abc3 = 123;
 console.log(abc1 == abc2 == abc3);//( True == abc3 ) eventually this
 
 console.log(undefined != null); // false
+*/
 
 //LOGICAL OPR
 /*
