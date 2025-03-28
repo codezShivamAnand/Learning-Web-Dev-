@@ -56,8 +56,8 @@ ReactDOM.render(ul, document.getElementById("root"));
 // element2.style.backgroundColor = "green"
 
 // append 
-const root = document.getElementById("root");
-root.append(element);
-root.append(element2);
+// const root = document.getElementById("root");
+// root.append(element);
+// root.append(element2);
 
 
