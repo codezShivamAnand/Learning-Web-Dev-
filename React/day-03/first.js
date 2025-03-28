@@ -61,3 +61,10 @@ const elementX = <> {Newelement3} {Newelement4} </>
 ReactRoot.render(<> {meet()} {greet()} </> );
 ReactRoot.render(elementX );
 
+// other ways to  react based component 
+function Greet(props){
+    return <h1>Hello, {props.name}, ur age, {props.age} </h1>;
+}
+
+const elementy = <Greet name="Shiv" age="23" />
+ReactRoot.render(elementy);
