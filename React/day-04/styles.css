@@ -1,0 +1,46 @@
+body{
+    margin: 0px;
+    /* padding:0px; */
+}
+.heading{
+    /* background-color: chartreuse; */
+    display: flex;
+    margin-bottom:5px;
+    justify-content: space-around;
+
+}
+.options, .account{
+    /* background-color: chartreuse; */
+    position: relative;
+    top:20px;
+
+}
+.options>button, .account>button{
+    background-color: white;
+    border:none;
+    margin-left:10px;
+    font-size:13px;
+    font-weight: bold;
+}
+.searchbox{
+    height:30px;
+    width:500px;
+    position: relative;
+    top:15px;
+    background-color:rgb(232, 225, 225);
+    border:none;
+}
+.card-body{
+    justify-content: center;
+    background-color:rgb(186, 39, 39);
+}
+.price{
+    background-color: rgb(35, 35, 107);
+    color: white;
+    font-size: 20px;
+}
+.midd{
+    background-color:rgb(154, 204, 46);
+    padding: 10px;
+
+}
