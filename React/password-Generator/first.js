@@ -1,4 +1,4 @@
-import React,{useState, useEffect} from "react";
+import React,{useState, useEffect, useCallback} from "react";
 import ReactDOM from "react-dom/client";
 
 function PasswordGenerator(){
@@ -8,7 +8,7 @@ function PasswordGenerator(){
     const [numberticked, setnumberticked] = useState(false);
     const [charticked, setcharticked] = useState(false);
 
-    function generatePassword(){
+    const generatePassword = useCallback(()=>{
         let str="abcdefghijklmnopqrstuvwxyz"
 
         if(numberticked){
@@ -23,19 +23,20 @@ function PasswordGenerator(){
             pass += str[Math.floor(Math.random()*str.length)];
         }
         setPassword(pass);
-    }
+    }, [length,numberticked,charticked])
 
     useEffect(()=>{ // save function from infinite calling 
         generatePassword();
-    }, [length,numberticked,charticked]) // function is called when either  of length, numberticked, charticked is changed, so these are passed as depenedencies 
+    }, [generatePassword]) // function is called when either  of length, numberticked, charticked is changed, so these are passed as depenedencies 
 
     return(
         <>
             <h1>{password}</h1>
-            <div>
-                <input type="range" min={10} max={25} value={length} onChange= {(e)=>setLength(e.target.value)}></input>
-                <label>Length {length}</label>
-
+            <div className="options">
+                <hr></hr>
+                <input id="first" type="range" min={10} max={25} value={length} onChange= {(e)=>setLength(e.target.value)}></input>
+                <label id="first">Length({length})</label>
+                <br></br>
                 <input type="checkbox" defaultChecked={numberticked} onChange={()=>setnumberticked(!numberticked)} ></input>
                 <label>Number</label>
 
