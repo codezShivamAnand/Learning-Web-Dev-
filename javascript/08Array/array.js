@@ -1,6 +1,7 @@
 // length
 const arr = [2,3,44,"Shiv", true, "hi", 3];
 // console.log(arr.length);
+// console.log(typeof arr); // object
 
 // Accessing 
 // console.log(arr[3]);
@@ -9,10 +10,10 @@ const arr = [2,3,44,"Shiv", true, "hi", 3];
 
 // const newarr1 = arr; // both referencing the same address, shallow copy  
 // console.log(newarr1 == arr); // both storing add of the same location
-// const newarr2 = structuredClone(arr); // copy arr to new location amd newarr2 points to new copy 
-// console.log(newarr2 == arr); 
-// console.log(typeof newarr2);
-// console.log(newarr2 === arr); // false as both are pointing to different location
+const newarr2 = structuredClone(arr); // copy arr to new location amd newarr2 points to new copy 
+// console.log(newarr2 == arr); // false;
+// console.log(typeof newarr2); // object
+// console.log(newarr2 === arr); // false as both are pointing to different location 
 
 // push : add element at end 
 // arr.push(2);
@@ -31,7 +32,7 @@ const arr = [2,3,44,"Shiv", true, "hi", 3];
 // console.log(arr);
 
 // delete operation 
-// delete arr[2]; // creates hole at index 0
+// delete arr[2]; // creates hole at index 2
 // console.log(arr); // arr = [ 2, 3, <1 empty item>, 'Shiv', true, 'hi', 3 ]
 
 // indexOf(element) : first occurance of element 
@@ -46,9 +47,9 @@ const arr = [2,3,44,"Shiv", true, "hi", 3];
 // console.log(arr.slice(1,3));
 
 //splice(i,j) : returns j elements starting from i or we can say, ith index se total j index return karo   
-// splice does changes to original arr
+// splice does changes the original arr
 // console.log(arr);
-// console.log(arr.splice(2,4)); // 2nd index se 4 elements nikal do
+// console.log(arr.splice(2,4)); // starting from 2nd index, remove 4 elements.
 // console.log(arr); // [ 2, 3, 3 ]
 
 // splice(starting_index, totoal_element_delete,add value just after jaha tak delete ho rkha hai )
@@ -85,17 +86,18 @@ let arr4 = arr1.concat(arr2, arr3);
 // console.log(arr1[4][1]);
 
 // 2-d array 
-let arr2d = [[2,4,6],[9,"hi",8],[8,"hi",1]];
+let arr2d = [[2,4,6],[9,["hi",0],8],[8,"hi",1]];
 // console.log(arr2d[0]);
 // console.log(arr2d[0][2]);
 
 // flat : to convert into 1-d array 
 let newarr = arr2d.flat(); // or flat(1)
 // console.log(newarr); 
+
 // 3d-array
 let arr3d = [[2, [3,5,6]],[4,6]];
 // console.log(arr3d[0][1][1]);
-// console.log(arr3d.flat(1)); // ek level abstraction ends 
+console.log(arr3d.flat(1)); // ek level abstraction ends 
 // console.log(arr3d.flat(2)); // 2 level abstraction ends 
 
 // flat(Infinity); saare level ko khol deta hai untill 1d array mein convert na ho jaye 
@@ -103,7 +105,7 @@ let arr3d = [[2, [3,5,6]],[4,6]];
 
 // Array.isArray(var_name); // returns true if array 
 let abc = [2,1,3,4];
-console.log(Array.isArray(abc));
+console.log(Array.isArray(abc)); // true
 
 // ANother way of creating array : Not recommended 
 let ac = new Array (2,434,54,6);
