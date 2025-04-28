@@ -58,18 +58,19 @@ switch(new Date().getDay()){
     console.log("Not a valid day");
         
 }
+*/
 
 // loop 
-for(let i = 0; i < 5; i++){
-    console.log("iteration" + i);
-    console.log("iteration", i);
-}
-let sum = 0;
-for(let i = 0; i < 5; i++){ // every iteration mein i ke liye new spacce allocated and sum ke liye new space allocated too 
-    sum+=i;
-}
-console.log(sum);
-*/
+// for(let i = 0; i < 5; i++){
+//     console.log("iteration" + i);
+//     console.log("iteration", i);
+// }
+// let sum = 0;
+// for(let i = 0; i < 5; i++){ // every iteration mein i ke liye new spacce allocated and sum ke liye new space allocated too 
+//     sum+=i;
+// }
+// console.log(sum);
+
 
 // Nested for loop
 // 12345
@@ -128,20 +129,21 @@ console.log(sum);
 
 
 // global scope : anyone can access 
-/*
-let a = 10;
-var b = 20;
-const c = 30;
-function greet(){
-    console.log(a);
-    console.log(b);
-    console.log(c);
-}
 
-for(let i = 0; i < 5; i++){
-    return a+b+c;
-}
-*/
+// let a = 11;
+// var b = 22;
+// const c = 32;
+// function greet(){
+//     console.log(a);
+//     console.log(b);
+//     console.log(c);
+// }
+// // greet();
+// for(let i = 0; i < 5; i++){
+//     return a+b+c;
+// }
+
+
 // local scope (functional scope) : function ke andr ane wale 
 // function greet(){
 //     let a = 20; /// can be accessed inside the funditon 
@@ -153,15 +155,18 @@ for(let i = 0; i < 5; i++){
 // greet();
 // console.log(a);// wrong 
 
-// block scope : if ekse , for loop , var can be used out of the scope too 
+// block scope : if else/ for loop ke andr me hi scope hota hai inka
 if(true){
     let a = 10;
     var b = 20;
     const c = 30;
 }
-// console.log(a);
+// console.log(a); // wrong access 
+// console.log(c); // wrong access 
+
+// var does not have block scope, only function scope.
+// If var is declared inside a {} block but outside a function, it is still accessible globally.
 console.log(b); // can be accessed outside 
-// console.log(c);
 
 for(var i = 0; i < 5; i++){
     console.log("hi");
@@ -176,7 +181,7 @@ if(true){
 }
 
 // another prob with var 
-console.log(xy); // variable xy is accessible evenn before declaration , even if the value is undefined 
+console.log(xy);// undefined, variable xy is accessible even before declaration , even if the value is undefined 
 var xy = 40;
 
 greet(); // still can be printed , cz its a var 
@@ -184,12 +189,12 @@ function greet(){
     console.log("hello, greet");
 }
 
-greet();
-// meet();
+// greet();
+// meet(); // meet is  a const so not accessible before decl
 const meet = function(){
     console.log("hello, meet");
 }
-meet();
+// meet();
 
 // while loop 
 // do while loop 

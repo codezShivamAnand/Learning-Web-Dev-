@@ -1,5 +1,5 @@
 /*
-let obj = {}
+let obj = {};
 
 obj.name = "rohit";
 obj.age = 29;
@@ -10,7 +10,8 @@ console.log(Object.getOwnPropertyDescriptor(obj, 'name'));
 obj.name = "Mohit" 
 // configurable == true means u can modify writable and enumerable of an obj 
 */
-/*
+
+
 let obj = {};
 Object.defineProperty(obj, "name",{
     value : "rohit",
@@ -30,7 +31,7 @@ Object.defineProperty(obj, "name",{
 obj.name =  "sogan"; 
 console.log(obj);
 
-// practical exam in bank 
+// practical example in bank 
 
 const customer = {
     name : "Sohan",
@@ -46,7 +47,7 @@ Object.defineProperty(customer, "name",{
 
 customer.name = "REMA";
 console.log(customer.name); // no change in name 
-*/
+
 
 // ENUMERABLE   
 const customer = {
@@ -105,7 +106,7 @@ Q. why we dont use for in loop for arrays?
  3: 40
 
  for (let index in arr){
-    console.log(index); // o,1,2,3
+    console.log(index); // 0,1,2,3
  }
 for-in loop goes through every keys of obj/arr , outputs keys : 0,1,2,3
 
@@ -122,21 +123,7 @@ this will be stored as how obj stores its property i.e, as key value
  gender: "Male"
 
 for (let index in arr){
-    console.log(index); // o, 1,2,3, name , gender
+    console.log(index); // 0, 1,2,3, name , gender
 }
 so for-in loop prints name and gender too as index of arr , but we know index of arr can't be string this is why we should not use for-in loop with arr
 */
-/*
-const arr = [10,20,30,40];
-for (let index in arr){
-    console.log(index); // o, 1,2,3
-}
-arr.name = "ENUM";
-arr.gender = "Male";
-for (let index in arr){
-    console.log(index); // o, 1,2,3, name , gender
-}
-for(let index = 0; index < arr.length; index++){
-    console.log(index, arr[index]);
-}
-    */
