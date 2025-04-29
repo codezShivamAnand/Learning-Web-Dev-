@@ -1,5 +1,5 @@
 function names(fun){
-    console.log("Hello i am indina");
+    console.log("Hello I am indian");
     fun();
 }
 
@@ -7,7 +7,7 @@ function names(fun){
 //     console.log("i am a call back funct");
 // }
 // names(greet);
-                        // or 
+                      //  or 
 // names(function greet(){
 //     console.log("i am a call back funct");
 // });
@@ -19,9 +19,9 @@ function names(fun){
 // names(greet);// reference is passed as argument 
             // or 
 
-// names(()=>{
-//     console.log("i am a call back funct");
-// });
+names(()=>{
+    console.log("i am a call back funct");
+});
 
 // call back func: function ke andr dusre funct ka reference 
 
@@ -31,4 +31,4 @@ function fetchData(){
 }
 
 // this setInterval is also a call back function 
-setInterval(fetchData, 5000); //  function_name and time in milisec
+// setInterval(fetchData, 5000); //  function_name and time in milisec

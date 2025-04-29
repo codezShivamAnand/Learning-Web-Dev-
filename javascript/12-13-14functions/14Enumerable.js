@@ -4,7 +4,7 @@ let obj = {};
 obj.name = "rohit";
 obj.age = 29;
 
-// key value , writable 
+// key: value, writable 
 console.log(Object.getOwnPropertyDescriptor(obj, 'name'));
 // writable == true means value ko change kar skta hun
 obj.name = "Mohit" 
@@ -61,7 +61,7 @@ let customer2 = Object.create(customer);
 customer2.city = "Haridwar";
 customer2.state = "Uk";
 
-Object.defineProperty(customer, "name",{ // name ka enumerable konfalse kar diya 
+Object.defineProperty(customer, "name",{ // name ka enumerable koi false kar diya 
     enumerable : false,
 })
 // jis jis property ka enumerable true hoga uska access hoga ya print kar skte hai for-in loop se, 
@@ -73,10 +73,10 @@ for(let key in customer2) // has access to all the property of customer except "
     console.log("customer2", key); 
 
 /* QUESTION IS why , customer jo ki Object.prototype se inherited hai, 
- for(let key in customer)
-    console.log("customer", key); // dindnt print(access) the keys of Object.prototype kyuki Object.prototype ke keys ka enumerbale false set hoga  
-  proof below for the key tostring() of Object.protoype
- */
+for(let key in customer)
+console.log("customer", key); // didn't print(access) the keys of Object.prototype kyuki Object.prototype ke keys ka enumerbale false set hoga  
+proof below for the key tostring() of Object.protoype
+*/
 console.log(Object.getOwnPropertyDescriptor(Object.prototype, "toString"));
 /* output
 {
@@ -95,35 +95,3 @@ for(let key in customer)
 // HW
 // defineproperties()
 // ==========================================================================================================
-/*
-Q. why we dont use for in loop for arrays?
- Ans. Arrays is an obj, and values of arrays actually stored like obj in key value pair 
- const arr = [10,20,30,40];
- // interanally stored as 
- 0: 10,
- 1: 20,
- 2: 30,
- 3: 40
-
- for (let index in arr){
-    console.log(index); // 0,1,2,3
- }
-for-in loop goes through every keys of obj/arr , outputs keys : 0,1,2,3
-
-Now if insert properties in above arr 
-  arr.name = "Enum";
-  arr.gender = "Male";
-this will be stored as how obj stores its property i.e, as key value 
- 
- 0: 10,
- 1: 20,
- 2: 30,
- 3: 40
- name: "ENUM",
- gender: "Male"
-
-for (let index in arr){
-    console.log(index); // 0, 1,2,3, name , gender
-}
-so for-in loop prints name and gender too as index of arr , but we know index of arr can't be string this is why we should not use for-in loop with arr
-*/
