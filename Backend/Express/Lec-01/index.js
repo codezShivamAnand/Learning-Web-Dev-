@@ -14,18 +14,29 @@ const app = express();
 // "/personal"
 // "/" 
 
-app.use("/home", (req,res)=>{
+app.use("/hom?e", (req,res)=>{
     res.send("HOME PAGE");
 })
 // ? -> the letter before the sign '?' becomes optional 
-app.use('/abou?t', (req,res)=>{
+app.use('/abou*t', (req,res)=>{
     res.send("ABOUT PAGE");
 })
+
+// will never reach to this when we route , http://localhost:4000/aboundfmbdsht/shiv , cz ? prefix matching so it will check the id inside the first "/abou*t" routes    
+// app.use('/abou*t/:name', (req,res)=>{
+//     console.log(req.params);
+//     res.send("ABOUT PAGE with id ");
+// })
+
+
 // '+' the letter just before it can be repeatedd many times in routing  
 app.use("/person+al", (req,res)=>{
     res.send("PERSONAL PAGE");
 })
-app.use("/contact", (req,res)=>{
+
+// : - parameters , used for dynamic routing 
+app.use("/contact/:id/:user", (req,res)=>{
+    console.log(req.params);
     res.send("CONTACT PAGE");
 })
 
