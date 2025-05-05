@@ -27,7 +27,12 @@ const AddToCart= [];
 
 // Saare food items dikhenge 
 app.get("/food",(req,res)=>{
-    res.send(FoodMenu);
+    try{
+        res.send(FoodMenu);
+    }
+    catch(err){
+        res.send("some erro" + err);
+    }
 })
 
 // USER and ADMIN me difference kaise karwayenge 
@@ -83,11 +88,12 @@ app.delete("/admin/:id", Auth, (req,res)=>{
 
     const id = parseInt(req.params.id);
     const food = FoodMenu.findIndex(item => item.id===id);
+    // findIndex returns index of the first element which matches the conditon , index will be used to delete the element using splice 
 
     if(food=== -1){
         res.status(401).send("Authentication needed")
     }else{
-        FoodMenu.splice(food,1);
+        FoodMenu.splice(food,1); // delete by index
         res.send("deleted");
     }
 })
@@ -124,25 +130,73 @@ app.patch("/admin",Auth,(req,res)=>{
     // }else{
     //     res.send("Bad request");
     // }
+    try{
+        const id = parseInt(req.body.id);
+        const item = FoodMenu.find(item=>item.id===id); // by reference jayega item me isliye item me change karne pr foodmenue ke andr item chamge ho rhe hai 
 
-    const id = parseInt(req.body.id);
-    const item = FoodMenu.find(item=>item.id===id); // by reference jayega item me isliye item me change karne pr foodmenue ke andr item chamge ho rhe hai 
+        console.log(item); // { id: 3, food: 'Chicken', category: 'non-veg', price: 1000 }
+        // patch koi ek ya many attributies bhi kar skta hai, toh thts why we check for every attributes 
+        if(item){
+            if(req.body.food)
+                item.food = req.body.food;
+            if(req.body.category)// agr category mein change kiya hai
+                item.category = req.body.category;
+            if(req.body.price)
+                item.price = req.body.price;
+            // console.log(item); // { id: 3, food: 'tikka masala', category: 'veg', price: 90 }
 
-    console.log(item); // { id: 3, food: 'Chicken', category: 'non-veg', price: 1000 }
-    // patch koi ek ya many attributies bhi kar skta hai, toh thts why we check for every attributes 
-    if(item){
-        if(req.body.food)
-            item.food = req.body.food;
-        if(req.body.category)// agr category mein change kiya hai
-            item.category = req.body.category;
-        if(req.body.price)
-            item.price = req.body.price;
-        // console.log(item); // { id: 3, food: 'tikka masala', category: 'veg', price: 90 }
-
-        res.send("patched succcessfully");
+            res.send("patched succcessfully");
+        }
+        else{
+            res.send("Item not exist")
+        }
+    }catch(err){
+        res.send("some error" + error);
     }
-    else{
-        res.send("Item not exist")
+})
+
+// USER -> Adding item to their cart 
+app.post("/user/:id", (req,res)=>{
+    const id = parseInt(req.params.id);
+    const food = FoodMenu.find(item=> item.id === id);
+    
+    if(food){
+        AddToCart.push(food);
+        console.log(AddToCart);
+        res.status(200).send("item added to cart");
+    }else{ // undefined case 
+        res.send("item out of stock");
+    }
+    
+}) 
+
+app.delete("/user/:id",(req,res)=>{
+    const id = parseInt(req.params.id); // DONT FORGET TO DO PARSE INT
+    const index = AddToCart.findIndex(item=> item.id === id);
+    // console.log(id);
+    if(index === -1) return res.status(404).send("item not  found");
+
+    AddToCart.splice(index,1);
+    res.send("item removed");
+})
+
+app.get("/user", (req,res)=>{
+
+    if(AddToCart.length === 0) res.send("empty cart");
+
+    res.send(AddToCart);
+})
+
+// error handling 
+app.use("/dummy",(req,res)=>{
+    try{
+        JSON.parse({"name": "shiv", "age":20});
+
+        // JSON.parse('{"name": "shiv", "age":20}');
+        res.send("No error");
+    }
+    catch(err){
+        res.send("some error " + err);
     }
 })
 
