@@ -31,7 +31,7 @@ const obj = {
 const newElement = (
     // To wrap multiple element, we use a div container or simple <> </>
     <> 
-        {/* we can give id, class or styles to these , MIND IT , Class is className is JSX  */}
+        {/* we can give id, class or styles to these , MIND IT , Class is className in JSX  */}
         
         <h1 className="sec" id="first" >Hello, Bachoo!!</h1> 
         {/* <h1 style={{backgroundColor:"blue", color: "yellow"}} >Sab thik!!</h1> */}
@@ -54,11 +54,14 @@ const greet  = () =>{
 const Newelement3 = greet();
 const Newelement4 = meet();
 
-const elementX = <> {Newelement3} {Newelement4} </>
 // ReactRoot.render(meet()); 
 // ReactRoot.render(greet());
+    // OR ek saath karna ho to 
+const elementX = <> {Newelement3} {Newelement4} </>
 
-ReactRoot.render(<> {meet()} {greet()} </> );
+
+// ReactRoot.render(<> {meet()} {greet()} </> ); 
+        // OR
 ReactRoot.render(elementX );
 
 // other ways to  react based component 
