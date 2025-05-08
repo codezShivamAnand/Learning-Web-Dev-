@@ -1,0 +1,6 @@
+npm init
+npm install 
+npm install parcel 
+npm install react react-dom
+npm install react-redux
+npm install @reduxjs/toolkit
