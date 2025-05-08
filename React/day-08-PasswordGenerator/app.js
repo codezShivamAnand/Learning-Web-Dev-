@@ -1,18 +1,16 @@
-import React, {useState,useEffect} from "react";
+import React, {useState,useEffect, useCallback} from "react";
 import ReactDOM from "react-dom/client";
 import './styles.css';
 
 function App(){
     const [password,setPassword] = useState("");
-
     // for length of the password 
     const [length, setLength] = useState("5");
-
     // for the number/char Include or not 
     const [includeNumbers, setIncludeNumbers] = useState(false);
     const [charInclude, setCharInclude] = useState(false);
 
-    function generatePassword(){
+    const generatePassword = useCallback(()=>{
         let str="abcdevfghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
         if(includeNumbers)
             str+="0123456789";
@@ -26,9 +24,25 @@ function App(){
         }
 
         setPassword(pass);
-    }
+    }, [length, includeNumbers, charInclude])
 
-        // generatePassword(); this will create an infinite funciton loop, try to run the code on ur own to find out 
+    // function generatePassword(){
+    //     let str="abcdevfghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    //     if(includeNumbers)
+    //         str+="0123456789";
+    //     if(charInclude)
+    //         str+="@%$&*!)>(";
+
+    //     let pass= " ";
+
+    //     for(let i = 0; i < length; i++){
+    //          pass += str[Math.floor(Math.random()*str.length)];
+    //     }
+
+    //     setPassword(pass);
+    // }
+
+    // generatePassword(); this will create an infinite funciton loop, try to run the code on ur own to find out 
 
     useEffect(()=>{
         generatePassword();
