@@ -11,18 +11,19 @@ body{
 }
 
 #root{
-    height: 100vh;
     text-align: center;
 }
 
-.conatiner{
-    background-color: rgb(193, 49, 49);
+.container{
+    background-color: rgb(49, 95, 193);
     padding: 20px;
     text-align: center;
 }
-button{
-    /* height: 32px;
-    width: 100px;
-    margin-right: 10px;
-    background-color: rgb(8, 224, 224); */
+
+#input-length{
+    padding: 10px;
 }
+#len{
+    margin-left: 10px;
+}
+
