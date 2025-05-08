@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import ReactDOM from "react-dom/client";
-// import from 
 // import './styles.css';
 
 function App(){
@@ -15,7 +14,6 @@ function App(){
             <h1>Count is :{count} </h1>
             <button onClick={IncrementNum}>Increment {count}</button>
             <button onClick={()=>setCount(count-1)} >Decrement {count}</button>
-
         </div>
     )
 }
