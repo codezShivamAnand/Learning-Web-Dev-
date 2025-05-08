@@ -1,0 +1,28 @@
+body{
+    background-color: black;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#root{
+    height: 100vh;
+    text-align: center;
+}
+
+.conatiner{
+    background-color: rgb(193, 49, 49);
+    padding: 20px;
+    text-align: center;
+}
+button{
+    /* height: 32px;
+    width: 100px;
+    margin-right: 10px;
+    background-color: rgb(8, 224, 224); */
+}
